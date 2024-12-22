@@ -1,0 +1,404 @@
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+body {
+  background-image: url(backgroud.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 400px){
+  body{
+    background-position-x: 15%;
+  }
+}
+
+/*header*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+}
+
+.header a img {
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Macondo Swash Caps", serif;
+  font-weight: bold;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  transition: 0.1s;
+  color: #c80203;
+}
+
+.header li + li {
+  margin-left: 20px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 0px;
+    flex-wrap: nowrap;
+  }
+
+  .header a img {
+    max-width: 120px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .header nav a {
+    font-size: 18px;
+    color: #c80203;
+  }
+}
+
+@media (max-width: 630px) {
+  .header {
+    padding: 0px;
+    flex-direction: column;
+  }
+
+  .header a img {
+    max-width: 110px;
+    margin-top: 20px;
+  }
+  .header nav a {
+    font-size: 18px;
+    margin: 0 20px;
+  }
+
+  .header li + li {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding: 10px 0px;
+  }
+
+  .header nav a{
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+}
+
+/*informacoes*/
+
+.informacoes {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin: 0 auto;
+  padding: 40px 0px;
+  color: white;
+}
+
+.informacoes-item {
+  background: #0e1a22e1;
+  padding: 10px;
+}
+
+.informacoes-item h1 {
+  color: #c80203;
+  font-size: 48px;
+  font-family: "Macondo Swash Caps", serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.informacoes-item p {
+  font-size: 1.2em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .informacoes-item {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-bottom: 20px;
+  }
+  .informacoes-item h1 {
+    font-size: 38px;
+  }
+
+  .informacoes-item p {
+    font-size: 0.9em;
+    line-height: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 630px) {
+  .informacoes-item {
+    margin: 0 20px;
+    max-width: auto;
+    padding-bottom: 20px;
+  }
+  .informacoes-item h1 {
+    font-size: 2.1em;
+  }
+
+  .informacoes-item p {
+    font-size: 0.8em;
+  }
+}
+
+/*personagens fundo*/
+
+.personagens-fundo {
+  display: flex;
+  background: url(fundo.png);
+  width: 600px;
+  margin: 0 auto;
+}
+
+.personagens-fundo span {
+  display: block;
+  font-size: 3em;
+  margin: 0 auto;
+  font-family: "Macondo Swash Caps", serif;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .personagens-fundo span {
+    font-size: 2.7em;
+  }
+}
+
+@media (max-width: 630px) {
+  .personagens-fundo {
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .personagens-fundo span {
+    font-size: 2.1em;
+  }
+}
+
+/*personagens*/
+
+.personagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(9, auto);
+  gap: 20px 0px;
+}
+
+.personagens-item {
+  border-radius: 5px;
+}
+
+.personagens-info {
+  background: #0e1a22e1;
+  padding: 10px 20px 0px 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.personagens-info h2 {
+  color: #c80203;
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+.personagens-info p {
+  font-size: 1.2em;
+}
+
+.citacao {
+  margin: 20px 0px;
+  font-size: 1.8em;
+  text-align: center;
+  color: rgb(155, 154, 154);
+}
+
+@media (max-width: 1200px) {
+  .personagens-info {
+    padding: 0px 10px 0px 10px;
+  }
+
+  .personagens-info h2 {
+    font-size: 2em;
+  }
+
+  .personagens-info p {
+    font-size: 1em;
+  }
+
+  .citacao {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .personagens {
+    grid-template-columns: 1fr;
+  }
+
+  .personagens-item {
+    width: 620px;
+    margin: 0 auto;
+  }
+  .personagens-info {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0px 10px 20px 10px;
+  }
+
+  .personagens-info h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .personagens-info p {
+    font-size: 1em;
+  }
+
+  .citacao {
+    font-size: 1.4em;
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 630px) {
+  .personagens-item {
+    width: auto;
+    margin: 0 20px;
+  }
+  .personagens-info {
+    width: auto;
+    margin: 0 20px;
+    padding: 0px 10px 20px 10px;
+  }
+
+  .personagens-info h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .personagens-info p {
+    font-size: 1em;
+  }
+
+  .citacao {
+    font-size: 1.4em;
+    margin: 10px 0px;
+  }
+}
+/*gameplay*/
+
+.gameplay-fundo {
+  display: flex;
+  background: url(fundo.png);
+  width: 600px;
+  margin: 0 auto;
+}
+
+.gameplay-fundo span {
+  display: block;
+  font-size: 3em;
+  margin: 0 auto;
+  font-family: "Macondo Swash Caps", serif;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .gameplay-fundo span {
+    font-size: 2.7em;
+  }
+}
+
+@media (max-width: 630px) {
+  .gameplay-fundo {
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .gameplay-fundo span {
+    font-size: 2.1em;
+  }
+}
+
+.video {
+  margin: 0 auto;
+}
+
+
+
+@media (max-width: 1200px) {
+  .tela {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 630px) {
+  .tela {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tela {
+    max-width: 340px;
+    max-height: 280px;
+  }
+}
+
+footer {
+  color: white;
+  background: black;
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Macondo Swash Caps", serif;
+  color: #c80203;
+  font-size: 3em;
+}
